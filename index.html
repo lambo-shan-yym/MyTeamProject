@@ -1,76 +1,49 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>现代浏览器博物馆</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css">
+	<title>Clean - One Page Personal Portfolio</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        body{
-            padding-top: 50px;
-        }
+	<!-- CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+	<link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/images/snow.png" rel="shortcut icon" />
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+   	<script src="assets/js/modernizr.custom.js"></script>
+       <style>
         .carousel{
             height: 500px;
-            margin-bottom: 60px;
+            margin-bottom: 0px;
         }
         .carousel .item{
             height: 500px;
+
         }
         .carousel .item img{
+			position:absolute;
+			margin-top: -100px;
+			clip:rect(100px,1920px,600px,0px);
             width: 100%;
         }
         .carousel-caption {
             z-index: 10;
         }
         .carousel-caption p{
-            margin-bottom: 20px;
+            margin-bottom: 150px;
             font-size: 16px;
             line-height: 1.4;
         }
-        .summary {
-            padding-right: 15px;
-            padding-left: 15px;
-        }
 
-        .summary .col-md-4{
-            margin-bottom: 20px;
-
-            text-align: center;
-        }
-        /* 特性*/
-        .feature-divider {
-            margin: 40px 0;
-        }
-
-        .feature{
-            padding: 30px 0;
-        }
-        .feature-heading{
-
-            font-size: 50px;
-            color: #269abc;
-        }
-        .feature-heading .text-muted {
-            font-size: 28px;
-        }
 
         @media (max-width: 768px) {
-            .summary {
-                padding-right: 3px;
-                padding-left: 3px;
-            }
+            
 
             .carousel {
                 height: 300px;
@@ -90,316 +63,475 @@
                 line-height: 1.4;
             }
         }
-        @media (min-width: 992px) {
-            .feature-heading {
-                margin-top: 120px;
-            }
-        }
+   
 
     </style>
 </head>
 <body>
-<!-- 导航栏-->
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
-    <div class="container">
-        <div class="navbar-header">
-            <button  type="button" class="navbar-toggle"
-            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">现代浏览器博物馆</a>
-        </div>
+<div id="test">
+	<!-- Preloader -->
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#ad-carousel">综述</a></li>
-                    <li><a href="#summary-container">简述</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            特点<span class="caret"></span>
-                        </a>
-                        <!--下拉框 -->
-                        <ul class="dropdown-menu">
-                            <li><a href="#feature-tab" data-tab="tab-chrome">Chrome</a></li>
-                            <li><a href="#feature-tab" data-tab="tab-firefox">Firefox</a></li>
-                            <li><a href="#feature-tab" data-tab="tab-safari">Safari</a></li>
-                            <li><a href="#feature-tab" data-tab="tab-opera">Opera</a></li>
-                            <li><a href="#feature-tab" data-tab="tab-ie">IE</a></li>
-                            <!-- 分割线-->
-                            <!--<li role="separator" class="divider"></li> -->
-                        </ul>
-                        <!--下拉框 -->
-                    </li>
-                    <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
-                </ul>
-        </div>
-    </div>
+	<!-- <div id="preloader">
+		<div id="status"></div>
+	</div>-->
+	<!-- Navigation start -->
+
+	<header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">lambo</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<audio controls="controls" preload="auto"	style="height:40px;" loop="loop">
+					  <source src="assets/mp3/带你去旅行.mp3" type="audio/mpeg" />			
+					</audio>
+					
+				</div>
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Works</a></li>
+						<li><a href="#testimonials">Testimonials</a></li>
+					</ul>
+				</div>
+
+			</div><!-- .container -->
+
+		</nav>
+
+	</header>
+
+	<!-- Navigation end -->
+	<!-- Home start -->
+
+	<section id="home">
+       <!-- 轮播图-->
+		<div  id="ad-carousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li class="active" data-target="#ad-carousel " data-slide-to="0"></li>
+				<li data-target="#ad-carousel " data-slide-to="1"></li>
+				<li data-target="#ad-carousel " data-slide-to="2"></li>
+				
+			</ol>
+			<div  class="carousel-inner">
+				<!--1 -->
+				<div class="item active">
+					<img src="assets/images/carousel-1.jpg" alt="1 slide" style="position:absolute;margin-top: -150px;clip:rect(150px,1920px,650px,0px);">
+					<div class="container">
+						<div class="carousel-caption">
+							
+							<p>我宁愿喝一杯香醇的、热气腾腾的咖啡，也不愿变得无知</p>
+							
+						</div>
+					</div>
+				</div>
+				<!--2 -->
+				<div class="item ">
+					<img src="assets/images/carousel-2.jpg" alt="2 slide" tyle="position:absolute;margin-top: -200px;clip:rect(200px,1920px,700px,0px);">
+					<div class="container">
+						<div class="carousel-caption">
+							
+							<p>有些事，只能一个人做。有些关，只能一个人过。有些路啊，只能一个人走。</p>
+							
+						</div>
+					</div>
+				</div>
+				<!--3 -->
+				<div class="item">
+					<img src="assets/images/carousel-3.jpg" alt="3 slide" style="position:absolute;margin-top: -80px;clip:rect(80px,1920px,580px,0px);">
+					<div class="container">
+						<div class="carousel-caption">
+						
+							<p>
+								你站在桥上看风景， 
+								看风景人在楼上看你。 
+								明月装饰了你的窗子， 
+								你装饰了别人的梦。
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
+
+	<!-- Home end -->
+
+	<!-- Navigation start -->
+
+
+
+	<!-- Navigation end -->
+
+    <!-- Services start -->
+
+	<section id="services" class="pfblock pfblock-gray">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">This is what I do</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							努力的人，应该像好色那样好学。
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInLeft">
+						<div class="iconbox-icon">
+							<span class="icon-magic-wand"></span>
+						</div>
+						<div class="iconbox-text">
+							<h3 class="iconbox-title">编程开发</h3>
+							<div class="iconbox-desc">
+								Good things come to those who wait, but only the things left by those who hustle
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInLeft">
+						<div class="iconbox-icon">
+							<span class="icon-puzzle"></span>
+						</div>
+						<div class="iconbox-text">
+							<h3 class="iconbox-title">Web Programming</h3>
+							<div class="iconbox-desc">
+								Good things come to those who wait, but only the things left by those who hustle
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							<span class="icon-badge"></span>
+						</div>
+						<div class="iconbox-text">
+							<a href="https://weibo.com/u/5261264335"><h3 class="iconbox-title">微博</h3></a>
+							<div class="iconbox-desc">
+								Good things come to those who wait, but only the things left by those who hustle
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-3">
+
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							<span class="icon-question"></span>
+						</div>
+						<div class="iconbox-text">
+							<h3 class="iconbox-title">封印中</h3>
+							<div class="iconbox-desc">
+								Good things come to those who wait, but only the things left by those who hustle
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- Services end -->
+    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" title="模板之家">模板之家</a></div>
+	<!-- Portfolio start -->
+
+	<section id="portfolio" class="pfblock">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">My works</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+            
+            
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-1.jpg" alt="img01"/>
+                            <figcaption>
+                            <h2>Crazy <span>JAVA</span></h2>
+                                <p>从被忽悠到会忽悠</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-2.jpg" alt="img01"/>
+                            <figcaption>
+                            <h2>amazing <span>Node.js</span></h2>
+                                <p>从学神到学渣</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-3.jpg" alt="img01"/>
+                            <figcaption>
+                            <h2>Good <span>Database</span></h2>
+                                <p>从零基础到负基础</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-4.jpg" alt="img01"/>
+                            <figcaption>
+                            <h2>excellent <span>Linux</span></h2>
+                                <p>从入门到放弃</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-5.jpg" alt="img01"/>
+                            <figcaption>
+                            <h2>great <span>git</span></h2>
+                                <p>从入门到出家</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="assets/images/item-6.jpg" alt="img01"/>
+                            <figcaption>
+                            <h2>Don't <span>Poke</span></h2>
+                                <p>Lily likes to play with crayons and pencils</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+
+		</div><!-- .contaier -->
+
+	</section>
+
+	<!-- Portfolio end -->
+    
+
+
+	
+
+	<!-- Testimonials start -->
+
+	<section id="testimonials" class="pfblock pfblock-gray">
+
+		<div class="container">
+            
+            <div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">What my clients say</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							快闪开，无敌的我又开始装逼了
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+			<div class="row">
+								<div class="row">
+					<!-- team member item -->
+					<div class="col-md-3">
+						<div class="team-item">
+							<div class="team-image">
+								<img src="assets/images/author-2.jpg" class="img-responsive" alt="author">
+							</div>
+							<div class="team-text">
+								<h3></h3>
+								<div class="team-location">Algorithm</div>
+								<div class="team-position">– 算法 –</div>
+								<p>Mida sit una namet, cons uectetur adipiscing adon elit. Aliquam vitae barasa droma.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end team member item -->
+					<!-- team member item -->
+					<div class="col-md-3">
+						<div class="team-item">
+							<div class="team-image">
+								<img src="assets/images/author-6.jpg" class="img-responsive" alt="author">
+							</div>
+							<div class="team-text">
+								<h3></h3>
+								<div class="team-location">Design Pattern</div>
+								<div class="team-position">– 设计模式 –</div>
+								<p>Worsa dona namet, cons uectetur dipiscing adon elit. Aliquam vitae fringilla unda mir.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end team member item -->
+					<!-- team member item -->
+					<div class="col-md-3">
+						<div class="team-item">
+							<div class="team-image">
+								<img src="assets/images/author-3.jpg" class="img-responsive" alt="author">
+							</div>
+							<div class="team-text">
+								<h3></h3>
+								<div class="team-location">Network Knowledge</div>
+								<div class="team-position">– 网络基础 –</div>
+								<p>Aradan bes namet, cons uectetur moiscing adon elit. Aliquam vitae fringilla unda augue.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end team member item -->
+					<!-- team member item -->
+					<div class="col-md-3">
+						<div class="team-item">
+							<div class="team-image">
+								<img src="assets/images/author-4.jpg" class="img-responsive" alt="author">
+							</div>
+							<div class="team-text">
+								<h3></h3>
+								<div class="team-location">others resources</div>
+								<div class="team-position">– 五谷杂粮 –</div>
+								<p>Dolor sit don namet, cons uectetur beriscing adon elit. Aliquam vitae fringilla unda.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end team member item -->
+				</div>
+
+			</div>
+            <div class="row">
+
+			<div id="cbp-qtrotator" class="cbp-qtrotator">
+                <div class="cbp-qtcontent">
+                    <img src="assets/images/client-1.jpg" alt="client-1" />
+                    <blockquote>
+                      <p>Work with John was a pleasure. He understood exactly what I wanted and created an awesome site for my company.</p>
+                      <footer>Pino Caruso</footer>
+                    </blockquote>
+                </div>
+                <div class="cbp-qtcontent">
+                    <img src="assets/images/client-2.jpg" alt="client-2" />
+                    <blockquote>
+                      <p>I'm really happy with the results. Get 100% satisfaction is difficult but Alex got it without problems.</p>
+                      <footer>Jane Doe</footer>
+                    </blockquote>
+                </div>
+
+            </div>		
+
+            </div><!-- .row -->
+
+					
+		</div><!-- .row -->
+	</section>
+
+	<!-- Testimonial end -->
+
+
+
+
+
+	<!-- Footer end -->
+
+	<!-- Scroll to top -->
+
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
+	</div>
+    
+    <!-- Scroll to top end-->
+
+	<!-- Javascript files -->
+
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+	<script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.cbpQTRotator.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script type="text/javascript" src="assets/js/snow.jquery.min.js"></script>
+	<script src="assets/js/snow.js"></script>
 </div>
-<!-- 导航栏-->
-<!-- 轮播图-->
-<div  id="ad-carousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li class="active" data-target="#ad-carousel " data-slide-to="0"></li>
-        <li data-target="#ad-carousel " data-slide-to="1"></li>
-        <li data-target="#ad-carousel " data-slide-to="2"></li>
-        <li data-target="#ad-carousel " data-slide-to="3"></li>
-        <li data-target="#ad-carousel " data-slide-to="4"></li>
-    </ol>
-    <div  class="carousel-inner">
-        <!--1 -->
-        <div class="item active">
-            <img src="images/chrome-big.jpg" alt="1 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Chrome</h1>
-                    <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="http://www.google.cn/intl/zh-CN/chrome/browser/" target="_blank">点我下载</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--2 -->
-        <div class="item ">
-            <img src="images/firefox-big.jpg" alt="1 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Firefox</h1>
-                    <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="http://www.firefox.com.cn/download/" target="_blank">点我下载</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--3 -->
-        <div class="item">
-            <img src="images/safari-big.jpg" alt="1 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Safari</h1>
-                    <p>Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器。
-                    </p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="http://www.apple.com/cn/safari/" target="_blank">点我下载</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--4 -->
-        <div class="item ">
-            <img src="images/opera-big.jpg" alt="1 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Opera</h1>
-                    <p>Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。
-                    </p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank">点我下载</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--5 -->
-        <div class="item">
-            <img src="images/ie-big.jpg" alt="5 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>IE</h1>
-
-                    <p>Internet Explorer，简称 IE，是微软公司推出的一款网页浏览器。</p>
-
-                    <p><a class="btn btn-lg btn-primary" href="http://ie.microsoft.com/" target="_blank"
-                          role="button">点我下载</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Controls-->
-    <a class="left carousel-control" href="#ad-carousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">上一页</span>
-    </a>
-    <a class="right carousel-control" href="#ad-carousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">下一页</span>
-    </a>
-
-</div>
-<!-- 轮播图-->
-<!-- 主要内容 三栏式-->
-<div class="container summary" id="summary-container">
-    <!-- 简介-->
-    <div class="row">
-        <div class="col-md-4">
-            <img class="img-circle" src="images/chrome-logo-small.jpg" alt="chrome">
-            <h2>Chrome</h2>
-            <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
-            <p><a class="btn btn-primary" href="#" role="button">点我下载</a></p>
-        </div>
-        <div class="col-md-4">
-            <img class="img-circle" src="images/firefox-logo-small.jpg" alt="firefox">
-            <h2>Firefox</h2>
-            <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
-            <p><a class="btn btn-primary" href="#" role="button">点我下载</a></p>
-        </div>
-        <div class="col-md-4">
-            <img class="img-circle" src="images/safari-logo-small.jpg" alt="safari">
-            <h2>Safari</h2>
-            <p>Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器。</p>
-            <p><a class="btn btn-primary" href="#" role="button">点我下载</a></p>
-        </div>
-    </div>
-    <hr class="feature-divider">
-    <!-- 标签页-->
-    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
-        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Chrome</a></li>
-        <li><a href="#tab-firefox" role="tab" data-toggle="tab">Firefox</a></li>
-        <li><a href="#tab-safari" role="tab" data-toggle="tab">Safari</a></li>
-        <li><a href="#tab-opera" role="tab" data-toggle="tab">Opera</a></li>
-        <li><a href="#tab-ie" role="tab" data-toggle="tab">IE</a></li>
-    </ul>
-    <!-- tab panes-->
-    <div class="tab-content" >
-        <div class="tab-pane  active" id="tab-chrome">
-            <div class="row feature">
-                <div class="col-md-7">
-                    <h2 class="feature-heading">Google Chrome
-                        <span class="text-muted">使用最广的浏览器</span>
-                    </h2>
-                    <p class="lead">
-                        Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。
-                        该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。
-                    </p>
-                </div>
-                <div class="col-md-5">
-                        <img class="feature-image img-responsive" src="images/chrome-logo.jpg" alt="Chrome">
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane " id="tab-firefox">
-            <div class="row feature">
-                <div class="col-md-5">
-                    <img class="feature-image img-responsive" src="images/firefox-logo.jpg" alt="Chrome">
-                </div>
-                <div class="col-md-7">
-                    <h2 class="feature-heading">Mozilla Firefox
-                        <span class="text-muted">美丽的狐狸</span>
-                    </h2>
-                    <p class="lead">
-                        Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器，
-                        使用Gecko引擎（非ie内核），支持多种操作系统如Windows、Mac和linux。                    </p>
-                </div>
-
-            </div>
-        </div>
-        <div class="tab-pane" id="tab-safari">
-            <div class="row  feature">
-                <div class="col-md-7">
-                    <h2 class="feature-heading">Safari
-                        <span class="text-muted">Mac用户首选</span>
-                    </h2>
-                    <p class="lead">
-                        Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。
-                        Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。                    </p>
-                </div>
-                <div class="col-md-5">
-                    <img class="feature-image img-responsive" src="images/safari-logo.jpg" alt="Chrome">
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane " id="tab-opera">
-            <div class="row feature">
-                <div class="col-md-5">
-                    <img class="feature-image img-responsive" src="images/opera-logo.jpg" alt="Chrome">
-                </div>
-                <div class="col-md-7">
-                    <h2 class="feature-heading">Opera
-                        <span class="text-muted">小众但易用</span>
-                    </h2>
-                    <p class="lead">
-                        Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。
-                        是跨平台浏览器可以在Windows、Mac和Linux三个操作系统平台上运行。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane" id="tab-ie">
-            <div class="row feature">
-                <div class="col-md-7">
-                    <h2 class="feature-heading">IE
-                        <span class="text-muted">你懂的</span>
-                    </h2>
-                    <p class="lead">
-                        Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet
-                        Explorer(7，8，9，10版本)，
-                        简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。
-                    </p>
-                </div>
-                <div class="col-md-5">
-                    <img class="feature-image img-responsive" src="images/ie-logo.jpg" alt="Chrome">
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- 标签页-->
-    <!-- 关于 -->
-    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
-         aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
-                    <h4 class="modal-title" id="modal-label">关于</h4>
-                </div>
-                <div class="modal-body">
-                    <p>慕课网隶属于北京慕课科技中心(有限合伙)，是一家从事互联网免费教学的网络教育公司。秉承“开拓、创新、公平、分享”的精神，
-                        将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌。</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">了解了</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <footer>
-        <p class="pull-right"><a href="#top">回到顶部</a></p>
-        <p>@copy Allen Walker</p>
-    </footer>
-</div>
-<!-- 主要内容 三栏式-->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--
-    <script src="../../bootstrap/js/jquery-1.11.1.min.js"></script>
-    <script src="../../bootstrap/js/jquery-3.2.0.min.js"></script>
--->
-<script src="js/jquery-1.11.1.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
-<script>
-    $(function () {
-        $('#ad-carousel').carousel();
-        $('#menu-nav .navbar-collapse a').click(function (e) {
-            var href = $(this).attr('href');
-            var tabId = $(this).attr('data-tab');
-            if ('#' !== href) {
-                e.preventDefault();
-                $(document).scrollTop($(href).offset().top - 70);
-                if (tabId) {
-                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
-                }
-            }
-        });
-    });
-</script>
-
 </body>
 </html>
